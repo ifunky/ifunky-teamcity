@@ -1,0 +1,30 @@
+{
+  "name":         "ifunky-teamcity",
+  "version":      "1.0.0",
+  "author":       "Dan Gibbons",
+  "license":      "MIT",
+  "summary":      "Install and configure TeamCity agent/server",
+  "source":       "https://github.com/ifunky/ifunky-teamcity",
+  "project_page": "https://github.com/ifunky/ifunky-teamcity",
+  "issues_url":   "https://github.com/ifunky/ifunky-teamcity/issues",
+  "operatingsystem_support": [
+      {
+        "operatingsystem": "Windows",
+        "operatingsystemrelease": [ "2008 R2", "2012", "2012 R2" ]
+      }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.4.0"
+    },
+    {
+      "name": "puppetlabs/powershell",
+      "version_requirement": ">= 1.0.4"
+    },
+    {
+      "name": "badgerious/windows_env",
+      "version_requirement": ">= 2.2.2"
+    }
+  ]
+}
