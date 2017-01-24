@@ -1,7 +1,7 @@
 # Private class that installs TeamCity and preqrequites
 #
 #
-class teamcity::install {
+class teamcity::agent::install inherits teamcity::params {
   windows::java { 'install java jdk':
     update      => '51',
     arch        => $::architecture,
@@ -16,8 +16,8 @@ class teamcity::install {
   }
 
   package { 'teamcityagent':
-    ensure          => '1.1.0',
-    install_options => ['-params','"',"serverurl=${teamcity_server_url}", 'agentDir=d:\\TeamCity\\BuildAgent','"'],
+    ensure          => '2.0.0',
+    install_options => ['-params','"',"serverurl=${teamcity_server_url}", 'agentDir=d:\TeamCity\BuildAgent','"'],
     provider        => 'chocolatey',
     require         => Windows::Java['install java jre']
   }

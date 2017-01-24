@@ -13,9 +13,4 @@ class teamcity () inherits teamcity::params {
     fail 'ERROR:: This module will only work on Windows.'
   }
 
-  class { '::template::install': } ->
-  class { '::template::config': } ~>
-  class { '::template::service': } ->
-  Class['::template']
-
 }

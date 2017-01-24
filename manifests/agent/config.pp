@@ -1,7 +1,10 @@
 # Private class to configure a TeamCity agent
 #
 #
-class teamcity::config {
+class teamcity::agent::config inherits teamcity::params
+{
+
+  notify { "TEAMCITY_SERVER_URL: $teamcity_server_url": }
 
   file { 'Visual Studio Web Targets':
     ensure             => directory,
