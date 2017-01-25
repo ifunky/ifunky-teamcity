@@ -4,5 +4,9 @@
 #
 #
 class teamcity::params {
-  $teamcity_server_url = 'http://somewhere.com'
+  $teamcity_server_url = 'http://teamcity.pra.rbxd.ds/'
+
+  #  Agent defaults
+  $agent_name          = $::hostname
+  $agent_port          = 9090
 }
