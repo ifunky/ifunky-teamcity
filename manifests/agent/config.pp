@@ -6,13 +6,7 @@ class teamcity::agent::config
 
   include ::teamcity::agent
 
-  #file { 'Visual Studio Web Targets':
-  #  ensure             => directory,
-  #  path               => 'C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio',
-  #  source             => 'puppet:///modules/teamcity/VisualStudio/',
-  #  source_permissions => ignore,
-  #  recurse            => true,
-  #}
+
 
   # Values in the properties file must be escaped as well i.e. \\
   ini_setting { 'serverUrl':
