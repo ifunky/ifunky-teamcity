@@ -11,7 +11,8 @@
 class teamcity::agent (
   $server_url          = undef,
   $agent_name          = $teamcity::params::agent_name,
-  $port                = $teamcity::params::agent_port
+  $port                = $teamcity::params::agent_port,
+  $install_dir         = $teamcity::params::install_dir
 ) inherits teamcity::params
 {
 

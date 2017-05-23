@@ -9,4 +9,5 @@ class teamcity::params {
   #  Agent defaults
   $agent_name          = $::hostname
   $agent_port          = 9090
+  $install_dir         = 'd:\\\TeamCity\\\BuildAgent'
 }
